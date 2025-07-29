@@ -148,17 +148,53 @@ body {
   .section-title{
     font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     border-bottom: 3px solid #6368af;
   }
+  .section-subtitle{
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #6368af;
+    position: relative;
+    display: inline-block;
+  }
+  .section-subtitle::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  bottom: 2px; /* 微调位置，使其略偏下 */
+  width: 100%;
+  height: 10px;  /* 下划线的厚度 */
+  background-color: #e5e5ec; /* 下划线的灰色背景色 */
+  z-index: -1;  /* 放在文字下方 */
+}
 
   .section-content{
     font-size: 0.9rem;
-    line-height: 1.3;
+    line-height: 1.4;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .custom-bullets {
+  list-style-type: disc; /* 可选：circle, square, none */
+  padding-left: 30px;
+}
+
+.custom-bullets li {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 5px; /* 调整每个列表项之间的间距 */
+}
+
+.highlight{
+  color:#6368af;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 
 .highlight-brush {
   position: relative;
